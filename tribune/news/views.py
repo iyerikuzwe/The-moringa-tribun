@@ -2,6 +2,7 @@ from django.http  import HttpResponse
 import datetime as dt
 from django.shortcuts import render, redirect
 from .models import Article
+from .forms import NewsLetterForm
 
 # Create your views here.
 def welcome(request):
