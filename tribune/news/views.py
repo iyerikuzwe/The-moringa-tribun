@@ -11,7 +11,15 @@ def welcome(request):
 def news_today(request):
     date = dt.date.today()
     news = Article.todays_news()
-    return render(request, 'all_news/today_news.html', {"date": date,"news":news})
+
+    if request.method == 'POST':
+        form = NewsLetterForm(request.Post)
+        if form.is_valid():
+            print('valid')
+        else:
+            form = NewLetterForm()
+
+    return render(request, 'all_news/today_news.html', {"date": date,"news":news,"letterForm":form})
 
 def news_of_day(request):
     date = dt.date.today()
