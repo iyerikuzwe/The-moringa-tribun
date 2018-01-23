@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
     'news.apps.NewsConfig',
     'bootstrap3',
     'django.contrib.admin',

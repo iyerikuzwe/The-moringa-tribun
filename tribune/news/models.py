@@ -1,6 +1,8 @@
 from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
+from tinymce.models import HTMLField
+
 
 class tags(models.Model):
     name = models.CharField(max_length =30) 
@@ -10,7 +12,7 @@ class tags(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length =60)
-    post = models.TextField()
+    post = post = HTMLField()
     editor = models.ForeignKey(User,on_delete=models.CASCADE)
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
