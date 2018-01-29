@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'tinymce',
     'news.apps.NewsConfig',
     'bootstrap3',

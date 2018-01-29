@@ -5,6 +5,10 @@ from .models import Article,NewsLetterRecipients
 from .forms import NewsLetterForm, NewArticleForm
 from .email import send_welcome_mail
 from django.contrib.auth.decorators import login_required
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .models import  MoringaMerch
+from .serializers import MerchSerializer
 
 # Create your views here.
 def welcome(request):
