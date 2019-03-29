@@ -1,4 +1,5 @@
 from django.http  import HttpResponse,  Http404, HttpResponseRedirect
+from django.http import JsonResponse
 import datetime as dt
 from django.shortcuts import render, redirect
 from .models import Article,NewsLetterRecipients
